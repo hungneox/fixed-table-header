@@ -21,15 +21,16 @@
 
             if ($.isEmptyObject(originalWidth)) {
                 $self.find('thead > tr > th').each(function (key, item) {
-                    originalWidth.push($(item).width());
+                    originalWidth.push($(item).outerWidth());
                 });
             }
             function init() {
                 $originalHeader = $self.find('thead:first');
                 $fixedHeader = $originalHeader.clone();
                 $fixedHeader.css('position', 'fixed');
-                $fixedHeader.css('height', $self.find('thead').height());
-                $fixedHeader.css('width', $self.find('thead').width());
+                $fixedHeader.css('display', 'none');
+                $fixedHeader.css('height', $self.find('thead').outerHeight());
+                $fixedHeader.css('width', $self.find('thead').outerWidth());
                 $fixedHeader.css('top', 0);
                 $fixedHeader.css('margin-top', 0);
                 $fixedHeader.css('z-index', 1);

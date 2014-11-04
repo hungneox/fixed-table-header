@@ -1,306 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+  <meta charset="UTF-8">
+  <title>Demo jquery.fixedTableHeader</title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
     .blue{
-        border:2px solid #1ABC9C;
-      }
+      border:2px solid #1ABC9C;
+    }
 
-      .blue thead{
-        background:#1ABC9C;
-      }
+    .blue thead{
+      background:#1ABC9C;
+    }
 
-      .purple{
-        border:2px solid #9B59B6;
-      }
+    .purple{
+      border:2px solid #9B59B6;
+    }
 
-      .purple thead{
-        background:#9B59B6;
-      }
-    </style>
+    .purple thead{
+      background:#9B59B6;
+    }
+    .scrollMore{
+      margin-top:600px;
+    }
+
+    .col-centered{
+      float: none;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
- <h1>&darr; SCROLL &darr;</h1>
-<table class="table table-bordered blue">
-  <thead>
-    <tr>
-      <th>Colonne 1</th>
-      <th>Colonne 2</th>
-      <th>Colonne 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-       <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-    <tr>
-      <td>Non</td>
-      <td>Mais</td>
-      <td>Allo !</td>
-    </tr>
-  </tbody>
-</table>
-
-<h1 class="scrollMore">&darr; SCROLL MORE &darr;</h1>
-<table class="table table-bordered purple">
-  <thead>
-    <tr>
-      <th>Column 1</th>
-      <th>Column 2</th>
-      <th>Column 3</th>
-      <th>Column 4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>Air</td>
-      <td>Earth</td>
-      <td>Fire</td>
-      <td>Water</td>
-    </tr>
-  </tbody>
-</table>
-<h1 class="up scrollMore">&uarr; UP &uarr;</h1>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="../js/jquery.fixedTableHeader.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('table').fixedTableHeader();
-        });
-    </script>
+  <div class="row">
+    <div class="col-lg-8 col-centered">
+     <h1>&darr; SCROLL &darr;</h1>
+     <table class="table table-bordered blue">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-lg-8 col-centered ">
+    <h1 class="scrollMore">&darr; SCROLL MORE &darr;</h1>
+    <table class="table table-bordered purple">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>Earth</td>
+          <td>Fire</td>
+          <td>Water</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h1 class="up scrollMore">&uarr; UP &uarr;</h1>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="../js/jquery.fixedTableHeader.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('table').fixedTableHeader();
+  });
+</script>
 </body>
 </html>

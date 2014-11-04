@@ -4,7 +4,7 @@ Enable fixed header for table without any extra css. This plugin also support fo
 
 # Sample usage
 
-```
+```html
  <script type="text/javascript">
     $(document).ready(function () {
         $('table').fixedTableHeader();
