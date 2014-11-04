@@ -38,7 +38,7 @@
             }
             function fixSize() {
                 $fixedHeader.find("th").each(function (index, item) {
-                    item.css("width", $self.find("th").eq(index).outerWidth());
+                    item.css("width", $originalHeader.find("th").eq(index).outerWidth());
                 });
             }
 
