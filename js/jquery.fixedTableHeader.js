@@ -1,5 +1,5 @@
 /*!
- * jQuery fixedTableHeader plugin
+ * jQuery FixedTableHeader plugin
  *
  * Copyright 2014 Hung Nguyen
  *
@@ -14,9 +14,9 @@
             var $self = $(this),
                 $fixedHeader,
                 $originalHeader,
-                tableTopOffset = -1,
-                tableBottomOffset = -1,
-                headerHeight = -1,
+                tableTopOffset,
+                tableBottomOffset,
+                headerHeight,
                 originalWidth = [];
 
             if ($.isEmptyObject(originalWidth)) {
@@ -37,22 +37,32 @@
                 $fixedHeader.css('z-index', 1);
                 $originalHeader.after($fixedHeader);
             }
-            function fixSize() {
-                $fixedHeader.find("th").each(function (index, item) {
-                    item.css("width", $originalHeader.find("th").eq(index).outerWidth());
+
+            function left() {
+                return parseInt($self.offset().left, 10) -  parseInt($(window).scrollLeft(), 10);
+            }
+
+            function onResize() {
+                $fixedHeader.css('left', left());
+                $fixedHeader.css('width', $self.find('thead').outerWidth());
+                $fixedHeader.find("th").each(function (index) {
+                    originalWidth[index] = $originalHeader.find("th").eq(index).outerWidth();
+                    $(this).css("min-width", $originalHeader.find("th").eq(index).outerWidth());
+                    $(this).css("max-width", $originalHeader.find("th").eq(index).outerWidth());
                 });
             }
 
             function onScroll() {
-                if (tableTopOffset === -1) {
-                    tableTopOffset = $self.offset().top;
-                    headerHeight = $fixedHeader.find('tr').height();
-                    tableBottomOffset = tableTopOffset + $self.height() - headerHeight;
-                }
+                tableTopOffset = $self.offset().top;
+                headerHeight = $fixedHeader.find('tr').height();
+                tableBottomOffset = tableTopOffset + $self.height() - headerHeight;
+
                 $fixedHeader.find('th').each(function (key, item) {
                     $(item).css('min-width', parseInt(originalWidth[key], 10));
                     $(item).css('max-width', parseInt(originalWidth[key], 10));
                 });
+
+                $fixedHeader.css('left', left());
                 if ($(window).scrollTop() > tableTopOffset && $(window).scrollTop() < tableBottomOffset) {
                     $fixedHeader.show();
                 } else {
@@ -60,7 +70,7 @@
                 }
             }
             init();
-            $(window).resize(fixSize);
+            $(window).resize(onResize);
             $(window).scroll(onScroll);
         });
     };
