@@ -1,5 +1,5 @@
 /*!
- * jQuery StickyTableHeader plugin
+ * jQuery fixedTableHeader plugin
  *
  * Copyright 2014 Hung Nguyen
  *
@@ -32,6 +32,7 @@
                 $fixedHeader.css('height', $self.find('thead').outerHeight());
                 $fixedHeader.css('width', $self.find('thead').outerWidth());
                 $fixedHeader.css('top', 0);
+                $fixedHeader.css('left', $self.find('thead').offset().left);
                 $fixedHeader.css('margin-top', 0);
                 $fixedHeader.css('z-index', 1);
                 $originalHeader.after($fixedHeader);
