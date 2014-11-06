@@ -19,11 +19,9 @@
                 headerHeight,
                 originalWidth = [];
 
-            if ($.isEmptyObject(originalWidth)) {
-                $self.find('thead > tr > th').each(function (key, item) {
-                    originalWidth.push($(item).outerWidth());
-                });
-            }
+            $self.find('thead > tr > th').each(function (key, item) {
+                originalWidth.push($(item).outerWidth());
+            });
             function init() {
                 $originalHeader = $self.find('thead:first');
                 $fixedHeader = $originalHeader.clone();
