@@ -11,3 +11,7 @@ Enable fixed header for table without any extra css. This plugin also support fo
     });
 </script>
 ```
+
+# Demo
+
+![Demo](demo.png)
