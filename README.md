@@ -1,6 +1,6 @@
 # jquery.fixedTableHeader v0.01
 
-Jquery plugin enables fixed header for table without any extra css. This plugin also support for boostrap table.
+A jquery plugin enables fixed header for table without any extra css. This plugin also support for boostrap table.
 
 # Sample usage
 
